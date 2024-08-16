@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
+.home {
+    width: 100%;
+    padding-top: 350px;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url(./assets/sponge.jpg) center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button {
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid whitesmoke;
+    background: linear-gradient(#1164B4, #002395);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+    background: mediumblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+    height: 100vh;
+    background-color: #020230;
+    color: white;
+    display: flex;
+}
+
+.main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url(./assets/sponge.jpg) center;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    height: 50%;
+    position: relative;
+}
+
+.timer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+.bottom {
+    height: 50%;
+}
+
+.trivia {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.question {
+    width: 80%;
+    min-height: 80px;
+    vertical-align: middle;
+    background: linear-gradient(#0087BD, #062A78);
+    border: 2px solid white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.answer {
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(rgb(65, 65, 141), rgb(0, 0, 69));
+    border: 1px solid white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0 10px 20px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+    background: mediumblue;
+}
+
+.answer.correct {
+    animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+
+    0%,
+    22%,
+    42% {
+        background: mediumblue;
+    }
+
+    20%,
+    40%,
+    60% {
+        background: linear-gradient(rgb(65, 65, 141), rgb(0, 0, 69));
+
+    }
+
+    62%,
+    100% {
+        background: green;
+    }
+}
+
+.answer.wrong {
+    animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+
+    0%,
+    22%,
+    42% {
+        background: mediumblue;
+    }
+
+    20%,
+    40%,
+    60% {
+        background: linear-gradient(rgb(65, 65, 141), rgb(0, 0, 69));
+
+    }
+
+    62%,
+    100% {
+        background: crimson;
+    }
+}
+
+.pyramid {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.moneyList {
+
+    list-style: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.moneyListItem.active {
+    background-color: teal;
+}
+
+.moneyListItemNumber {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    width: 30%;
+}
+
+.moneyListItemAmount {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.endText {
+    position: relative;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+
+    .home {
+        width: 348px;
+        padding-top: 200px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 130px;
+        height: 22px;
+        padding: 4px;
+        border: 1px solid whitesmoke;
+        border-radius: 6px;
+        font-size: 0.8rem;
+    }
+    .top {
+        height: 25%;
+    }
+
+    .timer {
+        width: 50px;
+        height: 50px;
+        border: 3px solid white;
+        font-size: 1.3rem;
+        left: 40px;
+
+    }
+
+    .bottom {
+        height: 75%;
+    }
+
+    .question {
+        font-size: 1rem;
+        min-height: 60px;
+        width: 70%;
+    }
+    .answer {
+        width: 60%;
+        padding: 6px;
+        font-size: 0.9rem;
+        border-radius: 7px;
+    }
+
+    .moneyList {
+
+      
+        padding: 5px;
+    }
+
+    .moneyListItemNumber {
+        font-size: 0.5rem;
+        font-weight: lighter;
+        width: 25%;
+    }
+
+    .moneyListItemAmount {
+        font-size: 0.6rem;
+        font-weight: 200;
+    }
+
+    .endText {
+        font-size: 1rem;
+    }
+
 }
