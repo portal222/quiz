@@ -26,20 +26,19 @@ const TriviaAnswer = ({
 
 
 
-    console.log("dolazi broj", number)
+    console.log(number)
 
     useEffect(() => {
         letsPlay();
-        console.log("ovde je zvuk")
     }, [letsPlay]);
 
     const handleCorrect = () => {
-        console.log("klik handleCorrect");
         setStyleCorrect("answer active");
         setTimeout(() => { setStyleCorrect("answer correct") }, 1000);
         setTimeout(() => { setQuestionNumber((prev) => prev + 1) }, 5000);
         setTimeout(() => { setStyleCorrect("answer") }, 5000);
         setTimeout(() => { correctAnswer() }, 3000);
+        setStyleCorrect("answer");
     };
 
     const handleWrong = () => {

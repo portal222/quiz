@@ -4,6 +4,7 @@ import Home from './Home';
 import EasyStart from './EasyStart';
 import MediumStart from './MediumStart';
 import HardStart from './HardStart';
+import Footers from './Footers';
 
 export default function Navigation() {
 return (
@@ -14,6 +15,7 @@ return (
             <Route path='/medium' element={<MediumStart />} />
             <Route path='/hard' element={<HardStart />} />
         </Routes>
+        <Footers />
     </HashRouter>
 )
 
