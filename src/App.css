@@ -1,6 +1,6 @@
 .home {
     width: 100%;
-    padding-top: 350px;
+    padding-top: 150px;
     height: 100vh;
     color: white;
     text-align: center;
@@ -9,6 +9,7 @@
 
 .title {
     font-size: 1.5rem;
+    text-shadow: 2px 2px 3px #020230;
 }
 
 .buttons {
@@ -21,7 +22,8 @@
 }
 
 .button {
-    width: 120px;
+    max-width: 120px;
+    min-width: 120px;
     height: 40px;
     padding: 10px;
     margin: 10px;
@@ -55,7 +57,7 @@
 }
 
 .top {
-    height: 50%;
+    height: 20%;
     position: relative;
 }
 
@@ -70,12 +72,12 @@
     font-size: 2rem;
     font-weight: 700;
     position: absolute;
-    bottom: 10px;
-    left: 80px;
+    bottom: 0px;
+    left: 110px;
 }
 
 .bottom {
-    height: 50%;
+    height: 80%;
 }
 
 .trivia {
@@ -83,20 +85,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
 .question {
     width: 80%;
-    min-height: 80px;
-    vertical-align: middle;
+    min-height: 70px;
     background: linear-gradient(#0087BD, #062A78);
     border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
     font-size: 1.5rem;
+    margin-bottom: 40px;
 }
 
 .answers {
@@ -180,11 +185,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .moneyList {
-
     list-style: none;
     width: 100%;
     padding: 20px;
@@ -216,6 +219,7 @@
     position: relative;
     margin: auto;
     font-size: 1.5rem;
+    text-shadow: 2px 2px 3px #020230;
 }
 
 .footer {
@@ -232,25 +236,29 @@
 @media screen and (max-width: 500px) {
 
     .home {
-        width: 348px;
-        padding-top: 200px;
+        width: 350px;
+        padding-top: 150px;
     }
 
     .title {
         font-size: 1rem;
+        text-shadow: 1px 1px 1px #020230;
+
     }
 
     .button {
-        width: 130px;
+        max-width: 70px;
+        min-width: 70px;
         height: 22px;
         padding: 4px;
+        margin: 8px;
         border: 1px solid whitesmoke;
         border-radius: 6px;
         font-size: 0.8rem;
     }
 
     .top {
-        height: 25%;
+        height: 10%;
     }
 
     .timer {
@@ -259,11 +267,10 @@
         border: 3px solid white;
         font-size: 1.3rem;
         left: 40px;
-
     }
 
     .bottom {
-        height: 75%;
+        height: 90%;
     }
 
     .question {
@@ -280,8 +287,6 @@
     }
 
     .moneyList {
-
-
         padding: 5px;
     }
 
@@ -298,6 +303,8 @@
 
     .endText {
         font-size: 1rem;
+        text-shadow: 1px 1px 1px #020230;
+
     }
 
     .footer {

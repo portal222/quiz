@@ -20,15 +20,10 @@ function MediumStart() {
 
     const url = `https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple`
 
-
     try {
       const response = await axios.get(url);
-
       const data = response.data
-      console.log("trivia podaci", data.results)
       setDatas(data.results);
-
-
     } catch (err) {
       setError(err);
     }
@@ -36,7 +31,6 @@ function MediumStart() {
 
   const moneyPyramid = useMemo(
     () =>
-
       [
         { id: 1, amount: "$ 100" },
         { id: 2, amount: "$ 200" },
@@ -56,7 +50,6 @@ function MediumStart() {
       ].reverse(),
     []
   );
-
 
   useEffect(() => {
     questionNumber > 1 &&
@@ -90,12 +83,9 @@ function MediumStart() {
               <span className="moneyListItemAmount">{m.amount}</span>
             </li>
           ))}
-
-
         </ul>
       </div>
     </div>
   );
 }
-
 export default MediumStart;

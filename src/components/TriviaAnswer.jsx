@@ -21,11 +21,6 @@ const TriviaAnswer = ({
     const [wrongAnswer] = useSound(wrong);
     const [letsPlay] = useSound(play2);
 
-
-
-
-
-
     console.log(number)
 
     useEffect(() => {
@@ -46,7 +41,6 @@ const TriviaAnswer = ({
         setTimeout(() => { setStyleWrong("answer wrong") }, 1000);
         setTimeout(() => { setStop(true) }, 5000);
         setTimeout(() => { wrongAnswer() }, 3000);
-
     };
 
     const handleWrong1 = () => {
@@ -54,7 +48,6 @@ const TriviaAnswer = ({
         setTimeout(() => { setStyleWrong1("answer wrong") }, 1000);
         setTimeout(() => { setStop(true) }, 5000);
         setTimeout(() => { wrongAnswer() }, 3000);
-
     };
 
     const handleWrong2 = () => {
@@ -62,11 +55,7 @@ const TriviaAnswer = ({
         setTimeout(() => { setStyleWrong2("answer wrong") }, 1000);
         setTimeout(() => { setStop(true) }, 5000);
         setTimeout(() => { wrongAnswer() }, 3000);
-
     };
-
-
-
 
     if (number == 1) {
         return (
@@ -119,7 +108,6 @@ const TriviaAnswer = ({
                 <div className={styleWrong2}
                     onClick={handleWrong2}
                     dangerouslySetInnerHTML={{ __html: incorrect?.[2] }}></div>
-
             </>
         )
     } else if (number == 0) {
@@ -140,6 +128,5 @@ const TriviaAnswer = ({
             </>
         )
     }
-
 }
 export default TriviaAnswer;

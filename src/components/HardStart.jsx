@@ -20,14 +20,10 @@ function HardStart() {
 
     const url = `https://opentdb.com/api.php?amount=15&difficulty=hard&type=multiple`
 
-
     try {
       const response = await axios.get(url);
-
       const data = response.data
-      console.log("trivia podaci", data.results)
       setDatas(data.results);
-
     } catch (err) {
       setError(err);
     }
@@ -94,6 +90,5 @@ function HardStart() {
     </div>
   );
 }
-
 export default HardStart;
 
