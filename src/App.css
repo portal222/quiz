@@ -12,6 +12,12 @@
     text-shadow: 2px 2px 3px #020230;
 }
 
+.category {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
 .buttons {
     margin: auto;
     display: flex;
@@ -40,6 +46,14 @@
 
 .button:hover {
     background: mediumblue;
+}
+
+.select {
+    padding: 5px;
+    margin: 15px;
+    font-size: 1.3rem;
+    width: 120px;
+   
 }
 
 .app {
@@ -246,6 +260,12 @@
 
     }
 
+    .category {
+        font-size: 1rem;
+   
+        padding-bottom: 15px;
+    }
+
     .button {
         max-width: 70px;
         min-width: 70px;
@@ -255,6 +275,12 @@
         border: 1px solid whitesmoke;
         border-radius: 6px;
         font-size: 0.8rem;
+    }
+    .select {
+        padding: 4px;
+        margin: 5px;
+        font-size: 0.8rem;
+        width: 75px;
     }
 
     .top {
