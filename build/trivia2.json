@@ -16,7 +16,7 @@
         "numb": "12"
     },
     {
-        "title": "Musicals and Theatres",
+        "title": "Musicals",
         "numb": "13"
     },
     {
@@ -32,19 +32,19 @@
         "numb": "16"
     },
     {
-        "title": "Science and Nature",
+        "title": "Nature",
         "numb": "17"
     },
     {
-        "title": "Science: Computers",
+        "title": "Computers",
         "numb": "18"
     },
     {
-        "title": "Science: Mathematics",
+        "title": "Mathematics",
         "numb": "19"
     },
     {
-        "title": "Science: Gadgets",
+        "title": "Gadgets",
         "numb": "30"
     },
     {
@@ -88,11 +88,11 @@
         "numb": "29"
     },
     {
-        "title": "Japanese Anime and Manga",
+        "title": "Anime & Manga",
         "numb": "31"
     },
     {
-        "title": "Cartoon and Animations",
+        "title": "Cartoon",
         "numb": "32"
     }
 ]

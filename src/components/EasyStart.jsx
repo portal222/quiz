@@ -11,6 +11,8 @@ function EasyStart() {
   const [error, setError] = useState(null);
   const [datas, setDatas] = useState([]);
   const [earned, setEarned] = useState("$ 0");
+  const [title, setTitle] = useState([]);
+
 
   useEffect(() => {
     getTrivia();
@@ -18,12 +20,15 @@ function EasyStart() {
 
   const getTrivia = async () => {
 
-    const url = `https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple`
+    const url = `https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple`
 
     try {
       const response = await axios.get(url);
       const data = response.data
+      setTitle(data.results.category)
+
       setDatas(data.results);
+      console.log("rezultat trivia", data.results);
     } catch (err) {
       setError(err);
     }
@@ -33,20 +38,15 @@ function EasyStart() {
     () =>
       [
         { id: 1, amount: "$ 100" },
-        { id: 2, amount: "$ 200" },
-        { id: 3, amount: "$ 300" },
-        { id: 4, amount: "$ 500" },
-        { id: 5, amount: "$ 1000" },
-        { id: 6, amount: "$ 2000" },
-        { id: 7, amount: "$ 4000" },
-        { id: 8, amount: "$ 8000" },
-        { id: 9, amount: "$ 16000" },
-        { id: 10, amount: "$ 32000" },
-        { id: 11, amount: "$ 64000" },
-        { id: 12, amount: "$ 125000" },
-        { id: 13, amount: "$ 250000" },
-        { id: 14, amount: "$ 500000" },
-        { id: 15, amount: "$ 1000000" }
+        { id: 2, amount: "$ 300" },
+        { id: 3, amount: "$ 900" },
+        { id: 4, amount: "$ 3000" },
+        { id: 5, amount: "$ 9000" },
+        { id: 6, amount: "$ 30000" },
+        { id: 7, amount: "$ 90000" },
+        { id: 8, amount: "$ 300000" },
+        { id: 9, amount: "$ 900000" },
+        { id: 10, amount: "$ 3000000" }
       ].reverse(),
     []
   );
@@ -65,6 +65,7 @@ function EasyStart() {
             <div className="timer"><Timer setStop={setStop} questionNumber={questionNumber} /></div>
           </div>
             <div className="bottom"><Trivia
+              title={title}
               data={datas}
               setStop={setStop}
               questionNumber={questionNumber}

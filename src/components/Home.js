@@ -88,33 +88,33 @@ const Home = () => {
                         onClick={() => handleHard()}>
                         Hard</div>
                 </div>
-                <div className="title">
-                Or choose questions <br></br>
-                 by difficulty and category
-                </div>
-                <div className="buttons">
-                <select onChange={handleOption} className="select">
-                    {category.map((categ) => (
-                        <option key={categ.id} value={categ.numb}>
-                            {categ.title}
-                        </option>
-                    ))}
-                </select>
-                <select onChange={handleOption2} className="select">
-                    {category2.map((categ) => (
-                        <option key={categ.id} value={categ.numb}>
-                            {categ.title}
-                        </option>
-                    ))}
-                </select>
-                <select onChange={handleOption3} className="select">
-                    {category3.map((categ) => (
-                        <option key={categ.id} value={categ.numb}>
-                            {categ.title}
-                        </option>
-                    ))}
-                </select>
-                </div>
+                    <div className="title">
+                        Or choose questions <br></br>
+                        by difficulty and category.
+                    </div>
+                    <div className="buttons">
+                        <select onChange={handleOption} className="select">
+                            {category.map((categ) => (
+                                <option key={categ.id} value={categ.numb}>
+                                    {categ.title}
+                                </option>
+                            ))}
+                        </select>
+                        <select onChange={handleOption2} className="select">
+                            {category2.map((categ) => (
+                                <option key={categ.id} value={categ.numb}>
+                                    {categ.title}
+                                </option>
+                            ))}
+                        </select>
+                        <select onChange={handleOption3} className="select">
+                            {category3.map((categ) => (
+                                <option key={categ.id} value={categ.numb}>
+                                    {categ.title}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
             </div>
         </>
     )

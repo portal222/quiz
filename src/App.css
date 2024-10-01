@@ -24,7 +24,6 @@
     align-items: center;
     justify-content: center;
     height: 300px;
-
 }
 
 .button {
@@ -53,6 +52,10 @@
     margin: 15px;
     font-size: 1.3rem;
     width: 120px;
+    background-color:#062A78;
+    color: white;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
    
 }
 
@@ -262,8 +265,11 @@
 
     .category {
         font-size: 1rem;
-   
         padding-bottom: 15px;
+    }
+
+    .buttons {
+        height: 150px;
     }
 
     .button {
@@ -280,6 +286,10 @@
         padding: 4px;
         margin: 5px;
         font-size: 0.8rem;
+        border: 1px solid whitesmoke;
+        border-radius: 6px;
+
+
         width: 75px;
     }
 
