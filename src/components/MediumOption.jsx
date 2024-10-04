@@ -4,6 +4,10 @@ import axios from "axios"
 import Timer from "./Timer";
 import Buttons from "./Buttons";
 import { useParams } from "react-router-dom";
+import Confetti from "react-confetti";
+import Applause from "./Applause";
+
+
 
 
 function MediumOption() {
@@ -42,15 +46,15 @@ function MediumOption() {
     () =>
       [
         { id: 1, amount: "$ 100" },
-        { id: 2, amount: "$ 300" },
-        { id: 3, amount: "$ 900" },
-        { id: 4, amount: "$ 3000" },
-        { id: 5, amount: "$ 9000" },
-        { id: 6, amount: "$ 30000" },
-        { id: 7, amount: "$ 90000" },
-        { id: 8, amount: "$ 300000" },
-        { id: 9, amount: "$ 900000" },
-        { id: 10, amount: "$ 3000000" }
+        { id: 2, amount: "$ 200" },
+        { id: 3, amount: "$ 300" },
+        { id: 4, amount: "$ 500" },
+        { id: 5, amount: "$ 800" },
+        { id: 6, amount: "$ 1300" },
+        { id: 7, amount: "$ 2100" },
+        { id: 8, amount: "$ 3400" },
+        { id: 9, amount: "$ 5500" },
+        { id: 10, amount: "$ 10000" }
       ].reverse(),
     []
   );
@@ -59,6 +63,27 @@ function MediumOption() {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
   }, [moneyPyramid, questionNumber])
+
+  if (earned === "$ 10000") {
+    return (
+      <div className="app">
+        <div className="main2">
+          <h1 className="congratulations">CONGRATULATIONS</h1>
+          <h1 className="endText">You have answered all the questions, <br></br>
+            you have reached the end<br></br>
+            and won: {earned}
+          </h1>
+          <Buttons />
+          <Confetti gravity={0.04} numberOfPieces={250}
+            initialVelocityX={4}
+            colors={["#FF4500", "#C9FFE5", "#FF0800", "#89CFF0", "#8A2BE2", "#C4D8E2", "#30BFBF",
+              "#FFF600", "#FFAE42", "#32CD32", "#9370DB"]}
+          />
+          <Applause />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="app">
@@ -69,7 +94,7 @@ function MediumOption() {
             <div className="timer"><Timer setStop={setStop} questionNumber={questionNumber} /></div>
           </div>
             <div className="bottom"><Trivia
-            title={title}
+              title={title}
               data={datas}
               setStop={setStop}
               questionNumber={questionNumber}

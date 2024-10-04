@@ -17,7 +17,6 @@ const Home = () => {
         axios.get(`./trivia.json`).then(res => {
             const data = res.data;
             setCategory(data)
-            console.log("trivia kategorije podaci", data)
         });
     }, []);
 
@@ -25,7 +24,6 @@ const Home = () => {
         axios.get(`./trivia2.json`).then(res => {
             const data = res.data;
             setCategory2(data)
-            console.log("trivia kategorije podaci", data)
         });
     }, []);
 
@@ -33,7 +31,6 @@ const Home = () => {
         axios.get(`./trivia3.json`).then(res => {
             const data = res.data;
             setCategory3(data)
-            console.log("trivia kategorije podaci", data)
         });
     }, []);
 
@@ -53,19 +50,16 @@ const Home = () => {
     }
 
     const handleOption = (event) => {
-        console.log("klik sa option linka", event.target.value);
         const LinkTo = `/option/${event.target.value}`;
         navigate(LinkTo);
     }
 
     const handleOption2 = (event) => {
-        console.log("klik sa option linka", event.target.value);
         const LinkTo = `/option2/${event.target.value}`;
         navigate(LinkTo);
     }
 
     const handleOption3 = (event) => {
-        console.log("klik sa option linka", event.target.value);
         const LinkTo = `/option3/${event.target.value}`;
         navigate(LinkTo);
     }
